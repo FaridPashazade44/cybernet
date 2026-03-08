@@ -1,0 +1,48 @@
+/* Theme variables */
+html[data-theme="dark"]{
+  --bg: #0b0f17;
+  --surface: rgba(16, 24, 40, .55);
+  --surface-2: rgba(16, 24, 40, .40);
+  --stroke: rgba(255,255,255,.10);
+  --stroke-2: rgba(255,255,255,.16);
+
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.68);
+
+  --accent-green: #24ff9e;
+  --accent-blue: #2ed6ff;
+  --accent-purple: #a96bff;
+
+  --danger: #ff4d6d;
+  --warning: #ffcc00;
+  --ok: #24ff9e;
+
+  --focus: rgba(46,214,255,.35);
+}
+
+html[data-theme="light"]{
+  --bg: #f5f7fb;
+  --surface: rgba(255,255,255,.70);
+  --surface-2: rgba(255,255,255,.55);
+  --stroke: rgba(10,15,23,.10);
+  --stroke-2: rgba(10,15,23,.16);
+
+  --text: rgba(10,15,23,.92);
+  --muted: rgba(10,15,23,.62);
+
+  --accent-green: #00b86b;
+  --accent-blue: #0077ff;
+  --accent-purple: #6c34ff;
+
+  --danger: #d92744;
+  --warning: #b88700;
+  --ok: #00b86b;
+
+  --focus: rgba(0,119,255,.22);
+}
+
+html.reduce-motion *{
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
