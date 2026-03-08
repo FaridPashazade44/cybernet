@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CYBERNET • Notifications</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+
+<body class="app">
+  <div class="app-bg">
+    <div class="grid-lines"></div>
+    <div class="glow g1"></div>
+    <div class="glow g2"></div>
+    <div class="glow g3"></div>
+  </div>
+
+  <header class="topbar glass">
+    <button class="icon-btn only-mobile" data-action="toggleSidebar" aria-label="Open navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <a class="topbar-brand" href="feed.html">
+      <span class="logo-badge small"><i class="fa-solid fa-shield-halved"></i></span>
+      <span class="brand-name">CYBERNET</span>
+    </a>
+
+    <div class="topbar-search">
+      <div class="input icon-left">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Filter notifications…" />
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <a class="avatar-btn" href="profile.html" title="Profile">
+        <img src="https://i.pravatar.cc/80?img=12" alt="Me" />
+        <span class="presence online"></span>
+      </a>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar glass" id="sidebar">
+      <nav class="nav">
+        <a class="nav-item" href="feed.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a class="nav-item" href="explore.html"><i class="fa-solid fa-compass"></i><span>Explore</span></a>
+        <a class="nav-item active" href="notifications.html"><i class="fa-solid fa-bell"></i><span>Notifications</span></a>
+        <a class="nav-item" href="messages.html"><i class="fa-solid fa-message"></i><span>Messages</span></a>
+        <a class="nav-item" href="profile.html"><i class="fa-solid fa-user"></i><span>Profile</span></a>
+        <a class="nav-item" href="#"><i class="fa-solid fa-bookmark"></i><span>Bookmarks</span></a>
+        <a class="nav-item" href="settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section class="page-title glass">
+        <div>
+          <h1>Notifications</h1>
+          <p class="muted">Signals, mentions, and security-style alerts.</p>
+        </div>
+        <div class="row gap-10">
+          <button class="btn btn--ghost btn--small" data-action="markAllRead">
+            <i class="fa-solid fa-check"></i><span>Mark all read</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="panel glass">
+        <div class="panel-body" id="notificationsFull"></div>
+      </section>
+    </main>
+
+    <aside class="right-panel" id="rightPanel">
+      <section class="panel glass">
+        <header class="panel-header">
+          <h3>Trending</h3>
+        </header>
+        <div class="panel-body" id="trends"></div>
+      </section>
+      <section class="panel glass">
+        <header class="panel-header">
+          <h3>Suggested</h3>
+        </header>
+        <div class="panel-body" id="suggested"></div>
+      </section>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    renderTrends();
+    renderSuggested();
+    renderNotificationsFull();
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+cyber-social-ui/
+  index.html                # login
+  register.html
+  feed.html                 # main app shell (feed + sidebar + right panels)
+  explore.html
+  notifications.html
+  messages.html
+  profile.html
+  settings.html
+
+  assets/
+    avatars/
+      avatar-1.jpg
+      avatar-2.jpg
+      avatar-3.jpg
+    posts/
+      post-1.jpg
+      post-2.jpg
+    logo.svg
+
+  css/
+    base.css                 # tokens, resets, typography, utilities
+    components.css           # cards, buttons, inputs, chips, modals, toasts
+    layout.css               # app shell grid, sidebar, panels
+    pages.css                # page-specific tweaks
+    themes.css               # dark/light theme variables
+
+  js/
+    data.js                  # dummy data (posts, users, chats, notifications, trends)
+    ui.js                    # small UI helpers (tabs, modals, dropdowns)
+    feed.js                  # rendering + like/comment/share interactions
+    messages.js              # chat UI interactions
+    settings.js              # theme toggle + switches
+    app.js                   # shared boot + nav active state

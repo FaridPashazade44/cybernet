@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CYBERNET • Register</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+
+<body class="auth">
+  <div class="auth-bg">
+    <div class="grid-lines"></div>
+    <div class="glow g1"></div>
+    <div class="glow g2"></div>
+    <div class="glow g3"></div>
+  </div>
+
+  <main class="auth-shell">
+    <section class="auth-card glass">
+      <header class="auth-header">
+        <div class="brand">
+          <div class="logo-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <div class="brand-name">CYBERNET</div>
+            <div class="brand-tag">Join the secure network</div>
+          </div>
+        </div>
+        <a class="chip" href="index.html">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back</span>
+        </a>
+      </header>
+
+      <h1 class="auth-title">Create account</h1>
+      <p class="auth-subtitle">Build your cyber-identity and share signals.</p>
+
+      <form class="form" onsubmit="event.preventDefault(); window.location.href='feed.html'">
+        <div class="grid-2">
+          <label class="field">
+            <span>First name</span>
+            <div class="input">
+              <input type="text" placeholder="Farid" required />
+            </div>
+          </label>
+
+          <label class="field">
+            <span>Last name</span>
+            <div class="input">
+              <input type="text" placeholder="P." required />
+            </div>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Email</span>
+          <div class="input icon-left">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+        </label>
+
+        <label class="field">
+          <span>Handle</span>
+          <div class="input icon-left">
+            <i class="fa-solid fa-at"></i>
+            <input type="text" placeholder="blue.team.ops" required />
+          </div>
+        </label>
+
+        <label class="field">
+          <span>Password</span>
+          <div class="input icon-left">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" placeholder="Create a strong passphrase" required />
+          </div>
+        </label>
+
+        <label class="toggle">
+          <input type="checkbox" checked />
+          <span class="toggle-ui"></span>
+          <span class="toggle-text">Subscribe to threat briefings</span>
+        </label>
+
+        <button class="btn btn--primary btn--wide" type="submit">
+          <i class="fa-solid fa-user-check"></i>
+          <span>Create</span>
+        </button>
+
+        <div class="auth-footer">
+          <span class="muted">Already have an account?</span>
+          <a class="link" href="index.html">Login</a>
+        </div>
+      </form>
+    </section>
+
+    <aside class="auth-aside glass">
+      <h2 class="aside-title">Suggested onboarding</h2>
+      <div class="stack gap-12">
+        <div class="mini-card glass">
+          <div class="row row--between">
+            <div class="row gap-10">
+              <span class="dot dot--green"></span>
+              <strong>Choose a focus</strong>
+            </div>
+            <span class="chip chip--small">SOC</span>
+          </div>
+          <p class="muted mt-8">Blue team, red team, DFIR, AppSec, CloudSec.</p>
+        </div>
+
+        <div class="mini-card glass">
+          <div class="row row--between">
+            <div class="row gap-10">
+              <span class="dot dot--blue"></span>
+              <strong>Add skills</strong>
+            </div>
+            <span class="chip chip--small">Skills</span>
+          </div>
+          <p class="muted mt-8">Showcase tools: Splunk, Sentinel, YARA, Burp, Wireshark.</p>
+        </div>
+
+        <div class="mini-card glass">
+          <div class="row row--between">
+            <div class="row gap-10">
+              <span class="dot dot--purple"></span>
+              <strong>Follow topics</strong>
+            </div>
+            <span class="chip chip--small">Tags</span>
+          </div>
+          <p class="muted mt-8">Threat intel, malware, detection engineering.</p>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
